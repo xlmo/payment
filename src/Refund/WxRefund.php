@@ -73,7 +73,7 @@ class WxRefund extends WxBaseStrategy
                 'refund_no' => $data['out_refund_no'],
                 'refund_id' => $data['refund_id'],
                 'refund_fee'    => $refund_fee,
-                'refund_channel' => $data['refund_channel'],
+                'refund_channel' => isset($data['refund_channel']) ? $data['refund_channel'] : '',
                 'amount'   => $total_fee,
                 'channel'   => Config::WX_REFUND,
 
